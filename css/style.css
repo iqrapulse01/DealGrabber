@@ -192,6 +192,26 @@ img {
      border: none !important;
 }
 
+.dropdown-menu {
+     background-color: transparent !important;
+     border: none !important;
+     box-shadow: none !important;
+     
+ }
+ 
+ /* Adjust text color for visibility */
+ .dropdown-menu .dropdown-item {
+     color: black !important;
+ }
+ 
+ .dropdown-menu .dropdown-item:hover,
+ .dropdown-menu .dropdown-item:focus {
+     background-color: rgb(247, 246, 246) !important;
+     color: black !important;
+     border-radius: 20px;
+ }
+ 
+
 .badge {
      font-weight: 500;
 }
