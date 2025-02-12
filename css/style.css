@@ -306,10 +306,10 @@ ul.btn li:last-child {
 
 .navigation.navbar-dark .navbar-nav .nav-link {
      margin: 0 23px;
-     color: #030000;
+     color: #050505;
      font-size: 17px;
      line-height: 20px;
-     font-weight: 400;
+     font-weight: 600;
      text-transform: uppercase;
      padding: 0 0 3px 0;
      position: relative;
@@ -377,14 +377,14 @@ ul.btn li:last-child {
 }
 
 .white_bg {
-     background-image: url('../image/new/a-hipster-young-asian-man-working.jpg'); /* Ensure correct path */
-     background-size: cover; /* Makes the image cover the entire div */
-     background-repeat: no-repeat; /* No repetition */
-     background-position: center center; /* Centers the image */
-     border-radius: 50px; /* Keeps your rounded corners */
-     opacity: 0.9; /* Slight transparency */
-     padding: 40px 35px; /* Keep your padding */
-     min-height: auto; /* Adjust based on content */
+     background-image: url('../image/new/close-up-view-of-businesswoman.jpg'); 
+     background-size: cover;
+     background-repeat: no-repeat; 
+     background-position: center center; 
+     border-radius: 50px; 
+     opacity: 0.9;
+     padding: 40px 35px; 
+     min-height: auto;
      position: relative;
  }
  .white_bg::before {
@@ -394,7 +394,7 @@ ul.btn li:last-child {
      left: 0;
      width: 100%;
      height: 100%;
-     background: rgba(253, 253, 253, 0.3); /* Adjust the last value (0.5) for darkness */
+     background: rgba(247, 248, 247, 0.8); 
      border-radius: 50px;
  }
 .logo img{
