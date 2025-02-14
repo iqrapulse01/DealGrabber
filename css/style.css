@@ -367,10 +367,13 @@ ul.btn li:last-child {
      color: #148446 !important;
 }
 
+   .pricing-box .btn:hover {
+      background: #148446 !important;
+      color: white !important;
+   }
+
 .header {
      width: 100%;
-     /* padding: 73px 80px; */
-     /* background: url(../images/hearder.jpg); */
      background: #044f70;
      background-size: 100% 100%;
      background-repeat: no-repeat;
@@ -518,7 +521,8 @@ ul.btn li:last-child {
      font-size: 20px;
      line-height: 50px;
      font-weight: 900;
-     text-shadow: 1px 1px 2px rgba(5, 5, 5, 0.7);
+     text-shadow: 1px 1px 2px rgba(5, 5, 5, 0.7), 1px 1px 2px rgba(5, 5, 5, 0.7), 1px 1px 2px rgba(5, 5, 5, 0.7);
+     letter-spacing: 2px;
 }
 
 .titlepage p {

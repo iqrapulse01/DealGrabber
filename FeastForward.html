@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeastForward - Restaurant Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f5f7;
+            color: #333;
+        }
+
+        .feastforward-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #148446;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            color: #044f70;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #148446;
+        }
+
+        .offer-box {
+            background: #e6f4ea;
+            padding: 15px;
+            border-left: 5px solid #148446;
+            font-weight: 600;
+            color: #044f70;
+            margin-bottom: 20px;
+        }
+
+        .offers {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .offer-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 4px solid #148446;
+        }
+
+        .offer-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #044f70;
+        }
+
+        .offer-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .features-list li i {
+            color: #148446;
+            margin-right: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .comparison-table th {
+            background: #044f70;
+            color: white;
+        }
+
+        .cta-box {
+            text-align: center;
+            margin-top: 30px;
+            background: #e6f4ea;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            border-left: 5px solid #148446;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #148446;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .cta-box a:hover {
+            background: #044f70;
+        }
+        .title-with-line {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #148446;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.title-with-line::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;  /* Same height as text */
+    width: 4px;  /* Line thickness */
+    background-color: #148446;
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="feastforward-section">
+        <h1 class="section-title">
+            <span class="title-with-line">FeastForward</span>
+            The Restaurant-Ready Program That Fills Tables & Wallets
+        </h1>
+        <p class="section-subtitle">Turn diners into regulars with bonus vouchers – <span class="highlight">no discounts, no Groupon-style profit slashing.</span></p>
+
+        <div class="offer-box">
+            🚀 <strong>Limited-Time Launch Offer:</strong> Join FeastForward for FREE + Keep 90% of Voucher Sales for 90 Days! 
+            <br> <span>(First 50 restaurants pay just 10% commission instead of 30%!)</span>
+        </div>
+
+        <h2 class="section-title">Irresistible Restaurant-Specific Offers</h2>
+        <div class="offers">
+            <div class="offer-card">
+                <h3>“Double Bonus” Opening Special</h3>
+                <p><strong>Voucher:</strong> 50for75 worth of food + free appetizer on first visit.</p>
+                <p><strong>Why It Works:</strong> Immediate value + repeat visits.</p>
+            </div>
+            <div class="offer-card">
+                <h3>“Off-Peak Gold” Tier</h3>
+                <p><strong>Voucher:</strong> 60for90 food credit, but $45 must be spent on weekdays.</p>
+                <p><strong>Benefit:</strong> Fills empty tables during slow days.</p>
+            </div>
+            <div class="offer-card">
+                <h3>“Loyalty Stack”</h3>
+                <p><strong>Voucher:</strong> 100for150 + $20 bonus every 3rd visit.</p>
+                <p><strong>Hook:</strong> “Keep coming back to unlock more rewards!”</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Profit-Boosting Perks</h2>
+        <ul class="features-list">
+            <li><i class="fas fa-bullhorn"></i> <strong>Fill My Tables Guarantee:</strong> Free social ads & email promotions.</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Dynamic Pricing Tool:</strong> Adjusts voucher bonuses based on demand.</li>
+            <li><i class="fas fa-money-bill-wave"></i> <strong>No-Risk Payouts:</strong> Get 80% upfront, 20% on redemption.</li>
+        </ul>
+
+        <h2 class="section-title">FeastForward vs. Groupon</h2>
+        <table class="comparison-table">
+            <tr>
+                <th>Feature</th>
+                <th>Groupon</th>
+                <th>FeastForward</th>
+            </tr>
+            <tr>
+                <td>Revenue per $50 Voucher</td>
+                <td>$25</td>
+                <td>$45</td>
+            </tr>
+            <tr>
+                <td>Repeat Customer Rate</td>
+                <td>12%</td>
+                <td>58%</td>
+            </tr>
+            <tr>
+                <td>Average Spend per Visit</td>
+                <td>$22</td>
+                <td>$38</td>
+            </tr>
+        </table>
+
+        <div class="cta-box">
+            🔥 <strong>Only 17/50 Spots Left!</strong> Claim Your 90% Revenue Deal →
+            <br>
+            <a href="#">Secure My 90% Revenue Deal</a>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+           <div class="container">
+              <div class="row">
+                 <!-- Logo & About Section -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a class="logo2" href="index.html"><img src="image/aboutuslogophotos/dealgrabber1bg.png" alt="Deal Grabber Logo" /></a>
+                    <div class="follow">
+                       <p>Discover the best deals and exclusive offers with Deal Grabber – your ultimate savings partner.</p>
+                    </div>
+                 </div>
+     
+                 <!-- Quick Links -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3>Quick Links</h3>
+                    <ul class="link_icon">
+                        <li><a href="index.html"><i class="fa fa-chevron-right"></i> Home</a></li>
+                       <li><a href="/index.html#about"><i class="fa fa-chevron-right"></i> About Us</a></li>
+                       <li><a href="/index.html#features"><i class="fa fa-chevron-right"></i> Features</a></li>
+                       <li><a href="/index.html#ez-services"><i class="fa fa-chevron-right"></i> Services</a></li>
+                       <li><a href="/index.html#pricing"><i class="fa fa-chevron-right"></i> Pricing</a></li>
+                       <li><a href="/index.html#get-started"><i class="fa fa-chevron-right"></i> Get Started</a></li>
+                   </ul>
+                 </div>
+     
+                 <!-- Social Media Section -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3>Follow Us</h3>
+                    <div class="follow">
+                       <p>Stay updated on the latest deals and discounts.</p>
+                       <ul class="social_icon">
+                          <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+                 </div>
+     
+                 <!-- Contact Section -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact Us</h3>
+                    <ul class="location_icon">
+                       <li><i class="fa fa-map-marker"></i> 123 abc Street, xyz City</li>
+                       <li><i class="fa fa-envelope"></i> support@dealgrabber.com</li>
+                       <li><i class="fa fa-phone"></i> +1 000 567 8900</li>
+                    </ul>
+                 </div>
+              </div>
+           </div>
+     
+           <!-- Copyright Section -->
+           <div class="copyright">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-md-10 offset-md-1 text-center">
+                       <p>© 2025 Deal Grabber. All Rights Reserved.</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+</body>
+</html>
