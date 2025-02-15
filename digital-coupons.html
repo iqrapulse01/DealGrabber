@@ -134,6 +134,44 @@ p {
         width: 95%;
     }
 }
+.core-values-section {
+    display: flex;
+    align-items: center;
+}
+
+.core-values {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.core-values li {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.core-values-img {
+    max-width: 100%;
+    width: 30%; /* Adjust image width */
+}
+
+@media (max-width: 768px) {
+    .core-values-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .core-values-img {
+        width: 70%;
+    }
+}
+
 
     </style>
 </head>
@@ -165,14 +203,24 @@ p {
                 </div>
             </div>
 
-            <h2>3 Core Values of Digital Coupons</h2>
-            <ul class="core-values">
-                <li><i class="fa fa-check-circle"></i> <strong>Whitelabel Campaigns:</strong> Design wonderful digital (gamified) coupons and customize them with your brand’s logo.</li>
-                <li><i class="fa fa-lock"></i> <strong>Protect Against Fraud:</strong> Reduce digital coupon fraud thanks to our secure digital coupon validation methods.</li>
-                <li><i class="fa fa-share-alt"></i> <strong>Omni-channel Distribution:</strong> Your digital campaigns are mobile-friendly, web-based, and can be embedded in various distribution methods.</li>
-            </ul>
-
-            <h2>How to Work with [Software]</h2>
+            <div class="row core-values-section" style="margin: 30px 0px;">
+                <!-- Left Side: Core Values -->
+                <div class="col-lg-6 col-md-6">
+                    <h2 style="color: #044f70;">3 Core Values of Digital Coupons</h2>
+                    <ul class="core-values">
+                        <li><i class="fa fa-check-circle"></i> <strong>Whitelabel Campaigns:</strong> Design wonderful digital (gamified) coupons and customize them with your brand’s logo.</li>
+                        <li><i class="fa fa-lock"></i> <strong>Protect Against Fraud:</strong> Reduce digital coupon fraud thanks to our secure digital coupon validation methods.</li>
+                        <li><i class="fa fa-share-alt"></i> <strong>Omni-channel Distribution:</strong> Your digital campaigns are mobile-friendly, web-based, and can be embedded in various distribution methods.</li>
+                    </ul>
+                </div>
+            
+                <!-- Right Side: Image -->
+                <div class="col-lg-6 col-md-6 text-center">
+                    <img src="image/game/click and win.png" alt="Core Values of Digital Coupons" class="img-fluid core-values-img">
+                </div>
+            </div>
+            
+            <h2  style="color: #044f70;">How to Work with [Software]</h2>
             <div class="work-steps">
                 <div class="step">
                     <h4>Create</h4>

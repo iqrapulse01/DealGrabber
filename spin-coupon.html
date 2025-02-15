@@ -11,6 +11,7 @@
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         /* General Styles */
 body {
@@ -28,6 +29,7 @@ body {
     padding: 40px 0;
     text-align: center;
 }
+
 
 /* Titles */
 .spin-wheel-section h1 {
@@ -127,6 +129,42 @@ body {
     color: #044f70; /* Dark Blue */
     margin-bottom: 10px;
 }
+/* Core Values Section */
+.core-values-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Left Side - Text */
+.core-values-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Right Side - Image */
+.core-values-image img {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .core-values-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .core-values-image img {
+        margin-top: 20px;
+    }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -146,15 +184,25 @@ body {
     
 
     <section class="spin-wheel-section">
+        
+
         <h1>Digital Spin Wheel Coupon</h1>
         <p class="intro-text">Add gamification to your mobile marketing with digital spin wheel coupons.</p>
 
-        <h2>3 Core Values of Digital Coupons</h2>
-        <ul class="core-values">
-            <li><i class="fas fa-palette"></i> <strong>Whitelabel campaigns:</strong> Customize coupons with your brand’s logo.</li>
-            <li><i class="fas fa-shield-alt"></i> <strong>Protect against fraud:</strong> Secure digital coupon validation.</li>
-            <li><i class="fas fa-bullhorn"></i> <strong>Omni-channel distribution:</strong> Mobile-friendly campaigns embedded across platforms.</li>
-        </ul>
+        <div class="core-values-container">
+            <div class="core-values-text">
+                <h2>3 Core Values of Digital Coupons</h2>
+                <ul class="core-values">
+                    <li><i class="fas fa-palette"></i> <strong>Whitelabel campaigns:</strong> Customize coupons with your brand’s logo.</li>
+                    <li><i class="fas fa-shield-alt"></i> <strong>Protect against fraud:</strong> Secure digital coupon validation.</li>
+                    <li><i class="fas fa-bullhorn"></i> <strong>Omni-channel distribution:</strong> Mobile-friendly campaigns embedded across platforms.</li>
+                </ul>
+            </div>
+            <div class="core-values-image">
+                <img src="image/game/spin and win.png" alt="Spin and Win Game">
+            </div>
+        </div>
+        
 
         <h2>Benefits of Spin Wheel Coupons</h2>
         <div class="benefits-grid">
