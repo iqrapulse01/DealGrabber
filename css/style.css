@@ -403,14 +403,15 @@ ul.btn li:last-child {
 .logo img{
      width: 140px;
 }
-/* .logo a {
-     font-size: 40px;
-     font-weight: bold;
-     text-transform: uppercase;
-     color: #fff;
-     line-height: 40px;
+/* .core-values-container{
+     
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 120px;
+color: black;
 } */
-
 
 /** banner section **/
 
