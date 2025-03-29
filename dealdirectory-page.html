@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+
+    <!-- Favicon for Different Browsers -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+
+    <!-- Apple Touch Icon (for iOS Home Screen) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+    <!-- Manifest for Android/Web Apps -->
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Direactory page</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+         /* Overlay background */
+         .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.3s ease;
+        }
+
+        /* Popup container */
+        .popup {
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        /* Popup text */
+        .popup h2 {
+            color: #148446;
+            font-weight: 800;
+        }
+
+        .popup p {
+            color: #333;
+            font-size: 12px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Close button */
+        .popup button {
+            background: #148446;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .popup button:hover {
+            background: #0e6d3e;
+        }
+
+        /* Show popup class */
+        .show-popup {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Popup HTML -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <h2>Deal Directory</h2>
+            <p>This is an example of our Deal Directory.</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <section class="coupon-section">
+        <div class="container">
+            <h1>Deal Directory</h1>
+            <p>Welcome to the Deal Directory page.</p>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo & About Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <a class="logo2" href="index.html"><img src="image/aboutuslogophotos/dealgrabber1bg.png"
+                                alt="Deal Grabber Logo" /></a>
+                        <div class="follow">
+                            <p>Discover the best deals and exclusive offers with Deal Grabber – your ultimate savings
+                                partner.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Quick Links</h3>
+                        <ul class="link_icon">
+                            <li><a href="index.html"><i class="fa fa-chevron-right"></i> Home</a></li>
+                            <li><a href="/index.html#about"><i class="fa fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="/index.html#features"><i class="fa fa-chevron-right"></i> Features</a></li>
+                            <li><a href="/index.html#ez-services"><i class="fa fa-chevron-right"></i> Services</a></li>
+                            <li><a href="/index.html#pricing"><i class="fa fa-chevron-right"></i> Pricing</a></li>
+                            <li><a href="capture-page.html"><i class="fa fa-chevron-right"></i> Get Started</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Follow Us</h3>
+                        <div class="follow">
+                            <p>Stay updated on the latest deals and discounts.</p>
+                            <ul class="social_icon">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact Us</h3>
+                        <ul class="location_icon">
+                            <li> <i class="fa fa-map-marker" style="margin-right: 5px;"> </i> Chicago, IL</li>
+                            <li> <i class="fa fa-envelope" style="margin-right: 5px;"> </i>  support@godealgrabber.com</li>
+                            <!-- <li><i class="fa fa-phone"></i> +1 000 567 8900</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 text-center">
+                            <p>© 2025 Deal Grabber. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Show popup on page load
+        window.onload = function() {
+            document.getElementById('popupOverlay').classList.add('show-popup');
+        };
+
+        // Close popup function
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('show-popup');
+        }
+    </script>
+</body>
+
+</html>

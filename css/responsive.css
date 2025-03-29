@@ -8,6 +8,11 @@
         left: 25%;
     }
 }
+@media (max-width: 1199px) {
+    .text-bg h1 {
+        font-size: 36px !important;
+    }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .navigation.navbar-dark .navbar-nav .nav-link {

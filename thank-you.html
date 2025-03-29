@@ -1,16 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Standard Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    
+   <!-- Favicon for Different Browsers -->
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+   
+   <!-- Apple Touch Icon (for iOS Home Screen) -->
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+   
+   <!-- Manifest for Android/Web Apps -->
+   <link rel="manifest" href="favicon/site.webmanifest">
     <title>Thank You</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 400px;
+        }
+
+        h2 {
+            color: #044f70;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #148446;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0f6632;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="capture-container">
-        <h2>Thank You!</h2>
-        <p>Your details have been submitted successfully.</p>
-        <a href="index.html">Go Back to Home</a>
+    <div class="container">
+        <h2>Thank You for Your Submission!</h2>
+        <p>We have received your details. Our team will contact you soon.</p>
+        <a href="https://www.godealgrabber.com/" class="btn">Go Back to Home</a>
     </div>
 </body>
+
 </html>
