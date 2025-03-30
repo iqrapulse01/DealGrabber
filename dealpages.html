@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+
+    <!-- Favicon for Different Browsers -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+
+    <!-- Apple Touch Icon (for iOS Home Screen) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+    <!-- Manifest for Android/Web Apps -->
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Deal Pages</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dealpages-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #148446;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            color: #044f70;
+            margin-bottom: 10px;
+        }
+
+        .title-with-line {
+            font-size: 30px;
+            font-weight: bolder;
+            color: #148446;
+            position: relative;
+            display: inline-block;
+            padding-right: 15px;
+        }
+
+        .title-with-line::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #148446;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #148446;
+        }
+
+        .offer-box {
+            background: #e6f4ea;
+            padding: 15px;
+            border-left: 5px solid #148446;
+            font-weight: 600;
+            color: #044f70;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .packages {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .package-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #148446;
+        }
+
+        .package-card h3 {
+            color: #044f70;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .package-card .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #148446;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            color: #148446;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .testimonial {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 5px solid #148446;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            color: #044f70;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #044f70;
+        }
+
+        .faq-answer {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            border-left: 4px solid #148446;
+        }
+
+        .cta-box {
+            text-align: center;
+            margin-top: 30px;
+            background: #e6f4ea;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            border-left: 5px solid #148446;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #148446;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background: #044f70;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .packages {
+                grid-template-columns: 1fr;
+            }
+
+            .dealpages-section {
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+        /* Overlay background */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.3s ease;
+            z-index: 10000;
+        }
+
+        /* Popup container */
+        .popup {
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+        }
+
+        /* Popup text */
+        .popup h2 {
+            color: #148446;
+            font-weight: 800;
+            z-index: 10000;
+        }
+
+        .popup p {
+            color: #333;
+            font-size: 12px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            z-index: 10000;
+        }
+
+        /* Close button */
+        .popup button {
+            background: #148446;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+            z-index: 10000;
+        }
+
+        .popup button:hover {
+            background: #0e6d3e;
+        }
+
+        /* Show popup class */
+        .show-popup {
+            opacity: 1;
+            visibility: visible ;
+            z-index: 10000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Popup HTML -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <h2>Deal Directory</h2>
+            <p>This is an example of our Deal Directory.</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+    <section class="dealpages-section">
+        <h1 class="section-title">
+            <span class="title-with-line">Deal Pages</span><br>
+            Your Interactive Digital Flipbook of Curated Local Deals
+        </h1>
+        <p class="section-subtitle">Powered by <span class="highlight">Deal Grabber</span></p>
+
+        <div class="offer-box">
+            🚀 Get Featured in Deal Pages: The Interactive Digital Flipbook Driving Local Sales!<br>
+            Advertise Your Business to hundreds of Deal-Hungry Shoppers—Curated, Clickable, and Irresistible
+        </div>
+
+        <h2 class="section-title">What is Deal Pages?</h2>
+        <p><strong>Deal Pages</strong> is Deal Grabber's <span class="highlight">premium digital flipbook</span>—a
+            dynamic, interactive deal digest designed for savvy savers who love exploration. Flip through beautifully
+            designed pages filled with handpicked local discounts, exclusive offers, and hidden gems, all while enjoying
+            the tactile feel of a magazine <i>and</i> the convenience of digital. No coupons, no clutter—just <span
+                class="highlight">curated savings at your fingertips</span>.</p>
+
+        <h2 class="section-title">Why Advertise in Deal Pages?</h2>
+        <ul class="features-list">
+            <li><strong>Hyper-Targeted Local Reach</strong><br>Your offers appear in a premium digital flipbook browsed
+                by thousands of engaged, deal-savvy shoppers in your city.</li>
+            <li><strong>Curated Audience, Zero Waste</strong><br>Deal Pages users are intentional—they want to spend,
+                but only on high-value, relevant deals. No ads lost in a feed!</li>
+            <li><strong>Interactive & Immersive</strong><br>Stand out with clickable hotspots, QR codes, video
+                integrations, and scrollable menus that turn passive readers into active customers.</li>
+            <li><strong>Budget-Friendly, High-ROI</strong><br>Start at just $79/month (or $59/month with annual
+                billing). Far cheaper than print ads—with 10x the engagement!</li>
+        </ul>
+
+        <h2 class="section-title">How It Works for Businesses</h2>
+        <ol class="features-list" style="list-style-type: decimal; padding-left: 25px;">
+            <li><strong>Submit Your Offer</strong><br>Discounts, BOGOs, loyalty perks, or seasonal specials. Add videos,
+                photos, or QR codes for interactive flair.</li>
+            <li><strong>Get Featured in the Next Flipbook</strong><br>Our team designs your offer into a stunning,
+                clickable spread.</li>
+            <li><strong>Watch Customers Flood In</strong><br>Track clicks, redemptions, and foot traffic via your
+                real-time dashboard.</li>
+        </ol>
+
+        <h2 class="section-title">Deal Pages Advertising Packages</h2>
+        <div class="packages">
+            <div class="package-card">
+                <h3>Spotlight Feature</h3>
+                <div class="price">$79/month</div>
+                <ul class="features-list">
+                    <li>Full-page spread in the monthly flipbook</li>
+                    <li>Clickable buttons + QR code integration</li>
+                    <li>Featured in the "Trending This Month" section</li>
+                    <li>Basic analytics (views, clicks, redemptions)</li>
+                </ul>
+            </div>
+            <div class="package-card">
+                <h3>Premium Interactive Bundle</h3>
+                <div class="price">$199/month</div>
+                <ul class="features-list">
+                    <li>Front-of-book placement + scrollable gallery</li>
+                    <li>Video integration (add a 30-second promo)</li>
+                    <li>Push notification + email blast to subscribers</li>
+                    <li>Advanced analytics (customer demographics)</li>
+                </ul>
+            </div>
+            <div class="package-card">
+                <h3>Seasonal Campaign Suite</h3>
+                <div class="price">$399/month</div>
+                <ul class="features-list">
+                    <li>Custom interactive challenge</li>
+                    <li>Multi-page feature + social media promotion</li>
+                    <li>Dedicated account manager + A/B testing</li>
+                    <li>Priority placement in all app deal alerts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="offer-box">
+            ✨ LIMITED-TIME OFFER: 30% OFF your first 3 months!<br>
+            <em>Use code</em> <strong>FLIP30</strong> <em>at signup.</em>
+        </div>
+
+        <h2 class="section-title">Success Stories from Deal Pages</h2>
+        <div class="testimonial">
+            <p>"Our café's 'Buy 1 Coffee, Get 1 Free' flipbook feature brought in 150 new customers in a week. The QR
+                code redemption made tracking a breeze!"</p>
+            <div class="author">— Emily, Owner of Bean & Brew Café</div>
+        </div>
+        <div class="testimonial">
+            <p>"We booked out a month of appointments after adding a video tour of our salon to the flipbook. Clients
+                loved the sneak peek!"</p>
+            <div class="author">— Carlos, Founder of Chic Cuts Studio</div>
+        </div>
+        <div class="testimonial">
+            <p>"The Holiday Gift Guide feature in Deal Pages doubled our December sales. The interactive hotspot clicks
+                were unreal!"</p>
+            <div class="author">— Priya, Manager of Urban Treasures Boutique</div>
+        </div>
+
+        <h2 class="section-title">Why Businesses Love Deal Pages</h2>
+        <ul class="features-list">
+            <li><strong>No design skills needed</strong> – Our team crafts your flipbook spread.</li>
+            <li><strong>Flexible scheduling</strong> – Feature in 1 issue or all 12 annual editions.</li>
+            <li><strong>Trackable ROI</strong> – See exactly how many sales your flipbook feature drives.</li>
+            <li><strong>Local loyalty boost</strong> – Shoppers trust Deal Pages' curated picks.</li>
+        </ul>
+
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-item">
+            <div class="faq-question">How often is Deal Pages published?</div>
+            <div class="faq-answer">Monthly! Subscribers get a fresh, themed edition (e.g., "Summer Savings," "Holiday
+                Gift Guide").</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I link my offer to my website or online store?</div>
+            <div class="faq-answer">Yes! Add clickable buttons to drive traffic anywhere.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What businesses fit Deal Pages?</div>
+            <div class="faq-answer">Perfect for: Restaurants, salons, retail stores, gyms, spas, event venues, and
+                service providers.</div>
+        </div>
+
+        <div class="cta-box">
+            Ready to Be Featured in Next Month's Flipbook?<br>
+            <a href="https://heyzine.com/flip-book/533434d45a.html#page/1" class="cta-button">Claim Your 30% Discount
+                Now</a>
+        </div>
+
+        <p style="text-align: center; font-size: 14px; margin-top: 40px;">
+            <strong>Deal Pages by Deal Grabber</strong> – Where Curated Meets Convertible.<br>
+            © 2025 Deal Grabber. Terms apply.<br><br>
+            <em>P.S.</em> First-time advertisers get a <strong>FREE social media shoutout</strong> with signup! 📣
+        </p>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo & About Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <a class="logo2" href="index.html"><img src="image/aboutuslogophotos/dealgrabber1bg.png"
+                                alt="Deal Grabber Logo" /></a>
+                        <div class="follow">
+                            <p>Discover the best deals and exclusive offers with Deal Grabber – your ultimate savings
+                                partner.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Quick Links</h3>
+                        <ul class="link_icon">
+                            <li><a href="index.html"><i class="fa fa-chevron-right"></i> Home</a></li>
+                            <li><a href="/index.html#about"><i class="fa fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="/index.html#features"><i class="fa fa-chevron-right"></i> Features</a></li>
+                            <li><a href="/index.html#ez-services"><i class="fa fa-chevron-right"></i> Services</a></li>
+                            <li><a href="/index.html#pricing"><i class="fa fa-chevron-right"></i> Pricing</a></li>
+                            <li><a href="capture-page.html"><i class="fa fa-chevron-right"></i> Get Started</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Follow Us</h3>
+                        <div class="follow">
+                            <p>Stay updated on the latest deals and discounts.</p>
+                            <ul class="social_icon">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact Us</h3>
+                        <ul class="location_icon">
+                            <li> <i class="fa fa-map-marker" style="margin-right: 5px;"> </i> Chicago, IL</li>
+                            <li> <i class="fa fa-envelope" style="margin-right: 5px;"> </i> support@godealgrabber.com
+                            </li>
+                            <!-- <li><i class="fa fa-phone"></i> +1 000 567 8900</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 text-center">
+                            <p>© 2025 Deal Grabber. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Show popup on page load
+        window.onload = function () {
+            document.getElementById('popupOverlay').classList.add('show-popup');
+        };
+
+        // Close popup function
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('show-popup');
+        }
+    </script>
+</body>
+
+</html>

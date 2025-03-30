@@ -19,38 +19,170 @@
    
    <!-- Manifest for Android/Web Apps -->
    <link rel="manifest" href="favicon/site.webmanifest">
+     <!-- Font Awesome for icons -->
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your main CSS file -->
+    <style>
+        /* Modern Form Styling */
+        .deal-form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #148446;
+        }
+        
+        .deal-form-title {
+            color: #044f70;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .deal-form-subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .deal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #044f70;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s;
+            background-color: #f9f9f9;
+        }
+        
+        .form-group input:focus {
+            border-color: #148446;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(20, 132, 70, 0.1);
+            outline: none;
+        }
+        
+        .form-group i {
+            position: absolute;
+            left: 15px;
+            bottom: 12px;
+            color: #148446;
+            font-size: 16px;
+        }
+        
+        .deal-form-button {
+            background: #148446;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .deal-form-button:hover {
+            background: #0e6933;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(20, 132, 70, 0.3);
+        }
+        
+        .deal-form-button i {
+            transition: transform 0.3s;
+        }
+        
+        .deal-form-button:hover i {
+            transform: translateX(3px);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .deal-form-container {
+                padding: 25px;
+                margin: 30px 15px;
+            }
+            
+            .deal-form-title {
+                font-size: 24px;
+            }
+        }
+        </style>
 </head>
 
 <body>
-    <div class="capture-container">
-        <h2>Start Growing Your Business Today</h2>
-        <p>Fill in your details to get started.</p>
-        <form action="https://formsubmit.co/the1921project@gmail.com" method="POST">
+    <div class="deal-form-container">
+        <h2 class="deal-form-title">Start Growing Your Business Today</h2>
+        <p class="deal-form-subtitle">Fill in your details to get started with Deal Grabber</p>
+        
+        <form action="https://formsubmit.co/the1921project@gmail.com" method="POST" class="deal-form">
             <input type="hidden" name="_subject" value="New Business Submission from Deal Grabber">
-
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="business_type">Business Type:</label>
-            <input type="text" id="business_type" name="business_type" required>
-
-            <label for="business_name">Business Name:</label>
-            <input type="text" id="business_name" name="business_name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-            <!-- Disable CAPTCHA -->
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required >
+                <!-- <i class="fas fa-user"></i> -->
+            </div>
+            
+            <div class="form-group">
+                <label for="business_type">Business Type</label>
+                <input type="text" id="business_type" name="business_type" required>
+                <!-- <i class="fas fa-store"></i> -->
+            </div>
+            
+            <div class="form-group">
+                <label for="business_name">Business Name</label>
+                <input type="text" id="business_name" name="business_name" required ">
+                <!-- <i class="fas fa-signature"></i> -->
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required >
+                <!-- <i class="fas fa-envelope"></i> -->
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required >
+                <!-- <i class="fas fa-phone"></i> -->
+            </div>
+            
             <input type="hidden" name="_captcha" value="false">
-
-            <!-- Redirect to Thank You Page -->
             <input type="hidden" name="_next" value="https://www.godealgrabber.com/thank-you.html">
-            <button type="submit">Submit</button>
+            
+            <button type="submit" class="deal-form-button">
+                Get Started 
+                <!-- <i class="fas fa-arrow-right"></i> -->
+            </button>
         </form>
-
     </div>
 </body>
 
