@@ -93,11 +93,10 @@
                                  </div>
                               </li>
                               <li class="nav-item dropdown">
-                                 <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <a class="nav-link dropdown-toggle" href="#ez-services" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Services
                                  </a>
                                  <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                    <a class="dropdown-item" href="#ez-services">Services</a>
                                     <a class="dropdown-item" href="/digital-coupons.html">Digital Coupons</a>
                                     <a class="dropdown-item" href="/gamified-coupons.html">Digital Gamified Coupons</a>
                                     <a class="dropdown-item" href="/scratch-coupon.html">Scratch & Win Coupon</a>
@@ -526,6 +525,13 @@
             });
          });
       });
+
+
+document.getElementById("featuresDropdown").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.location.href = "#features"; 
+});
+
    </script>
 
 </body>

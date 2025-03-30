@@ -196,7 +196,11 @@ img {
      background-color: transparent !important;
      border: none !important;
      box-shadow: none !important;
-     
+ }
+
+ .nav-item.dropdown:hover .dropdown-menu {
+     display: block;
+     margin-top: 0;
  }
  
  /* Adjust text color for visibility */
