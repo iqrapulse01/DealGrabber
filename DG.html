@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DG Directory - Dealopoly Powered Business Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+
+    <!-- Favicon for Different Browsers -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+
+    <!-- Apple Touch Icon (for iOS Home Screen) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+    <!-- Manifest for Android/Web Apps -->
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>ValueVault - Transform Shoppers into Loyal Fans</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary-blue: #044f70;
+            --primary-green: #148446;
+            --light-green: #e6f4ea;
+        }
+
+        .containerr {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        /* Modern Welcome Header */
+        .welcome-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(4, 79, 112, 0.2);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .welcome-header:hover {
+            transform: translateY(-5px);
+        }
+
+        .welcome-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .powered-by {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.8) !important;
+            padding: 5px 15px;
+            border-radius: 20px;
+            /* margin-top: 1px; */
+            font-size: 0.9rem;
+            color: #0e6933 !important;
+        }
+
+        /* Content Sections */
+        h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-top: 50px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-green);
+        }
+
+        .highlight-box {
+            background-color: var(--light-green);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 4px solid var(--primary-green);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .highlight-box:hover {
+            transform: translateX(5px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animated Cards */
+        .benefits,
+        .pricing-plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .benefit-card,
+        .plan {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .benefit-card:hover,
+        .plan:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--primary-green);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
+
+        /* Pricing Plans */
+        .plan h3 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin: 15px 0;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-green);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(20, 132, 70, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #0e6933;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(20, 132, 70, 0.4);
+        }
+
+        /* Footer */
+        .footer1 {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px 0;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+
+        .footer1 p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .welcome-header h1 {
+                font-size: 2rem;
+            }
+
+            .benefits,
+            .pricing-plans {
+                grid-template-columns: 1fr;
+            }
+
+            .powered-by {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .follow {
+                display: block;
+                /* Prevents unwanted centering */
+                text-align: left !important;
+                /* Ensures text aligns left */
+            }
+
+            .follow p {
+                margin-left: 0 !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- header inner -->
+        <div class="header">
+            <div class="white_bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="image/aboutuslogophotos/dealgrabber1bg.png"
+                                                alt="#" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                            <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarsExample04" aria-controls="navbarsExample04"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarsExample04">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="index.html"> Home </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#about">About Us</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#features" id="featuresDropdown"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Features
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="featuresDropdown">
+                                                <!-- <a class="dropdown-item" href="#features">Features</a> -->
+                                                <a class="dropdown-item" href="/dealdirectory-page.html">Deal Pages</a>
+                                                <a class="dropdown-item" href="/value.html">ValueVault</a>
+                                                <a class="dropdown-item" href="/FeastForward.html">FeastForward</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#ez-services"
+                                                id="servicesDropdown" role="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Services
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                                <a class="dropdown-item" href="/digital-coupons.html">Digital
+                                                    Coupons</a>
+                                                <a class="dropdown-item" href="/gamified-coupons.html">Digital Gamified
+                                                    Coupons</a>
+                                                <a class="dropdown-item" href="/scratch-coupon.html">Scratch & Win
+                                                    Coupon</a>
+                                                <a class="dropdown-item" href="/slot-coupon.html">Slot Machine
+                                                    Coupon</a>
+                                                <a class="dropdown-item" href="/spin-coupon.html">Spin Wheel Coupon</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#pricing">Pricing</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://promodeals.app/tZ2FRzAe7z/">DG Directory
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="capture-page.html">Get Started</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- end header inner -->
+                <!-- end header -->
+                <!-- banner -->
+                <section class="banner_main">
+                    <div id="banner1" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption">
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-7">
+                                                <div class="text-bg">
+                                                    <span>Welcome to the DG Directory</span>
+                                                    <!-- <h1>Boost Your Business with Gamified Digital Coupons</h1> -->
+                                                    <p>Where Your Deals Become the Main Event!</p>
+                                                    <div class="powered-by">Powered by Dealopoly: The Gamified Engine
+                                                        Driving Local Discovery & Sales</div>
+                                                    <!-- <a class="read_more" style="padding: 15px 10px; font-size: 16px;" href="capture-page.html"> Start Growing Your Business Today</a> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-5">
+                                                <div class="text_img">
+                                                    <!-- <figure><img src="image/aboutuslogophotos/pink_women.png" alt="#"/></figure> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+    <div class="containerr">
+
+        <!-- Modern Welcome Section -->
+        <!-- <div class="welcome-header">
+            <h1>Welcome to the DG Directory</h1>
+            <p>Where Your Deals Become the Main Event!</p>
+            <div class="powered-by">Powered by Dealopoly: The Gamified Engine Driving Local Discovery & Sales</div>
+        </div> -->
+
+        <h2>Why Partner with the DG Directory?</h2>
+
+        <div class="highlight-box">
+            <p>✅ <strong>Turn Casual Shoppers into Loyal Customers</strong><br>
+                Your business isn't just listed—it's <strong>playable</strong>. The DG Directory, fueled by our
+                <strong>Dealopoly game engine</strong>, transforms your discounts into interactive adventures that users
+                can't resist.
+            </p>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-card">
+                <h3>🎮 Gamified Visibility, Real-World Results</h3>
+                <p>Get featured in a dynamic ecosystem where users <em>spin, explore, and compete</em> to unlock deals.
+                    No more static ads—your offers become part of the game!</p>
+            </div>
+            <div class="benefit-card">
+                <h3>📍 Dual Exposure: Directory + Gameboard</h3>
+                <p>1. <strong>Listed by Business Sector</strong>: Appear in our searchable <a style="color: #148446;"
+                        href="https://promodeals.app/tZ2FRzAe7z/" target="_blank">Business Directory</a>—perfect for
+                    customers seeking your niche.<br>
+                    2. <strong>Own the Gameboard</strong>: Acquire a space on our <a style="color: #148446;"
+                        href="https://dealopoly.app/game" target="_blank">Interactive Dealopoly Gameboard</a> for a
+                    <strong>fully immersive brand experience</strong>.
+                </p>
+            </div>
+        </div>
+
+        <h2>How It Works</h2>
+        <ol>
+            <li><strong>List Your Business</strong><br>
+                - Add your profile to the <a style="color: #148446;" href="https://dealopoly.app" target="_blank">DG
+                    Directory</a></li>
+
+            <li><strong>Level Up with Dealopoly</strong><br>
+                - Upgrade to a <strong>custom gameboard space</strong> where users engage with your brand through:<br>
+                &nbsp;&nbsp;• <strong>Mini-games</strong>: Spin-to-win discounts, puzzle unlocks, or virtual treasure
+                hunts.<br>
+                &nbsp;&nbsp;• <strong>Interactive challenges</strong>: "Collect 3 coffee cups to earn 20% off!"<br>
+                &nbsp;&nbsp;• <strong>Priority placement</strong>: Featured in Dealopoly's high-traffic zones (e.g.,
+                "Main Street" or "Foodie Plaza").</li>
+
+            <li><strong>Track & Optimize</strong><br>
+                - Monitor real-time analytics: clicks, redemptions, and customer demographics.</li>
+        </ol>
+
+        <div class="highlight-box">
+            <p><strong>Become a DG Directory Partner</strong> - Get listed in our directory and gameboard to maximize
+                your visibility.</p>
+        </div>
+
+        <h2>Benefits of Joining the DG Directory</h2>
+
+        <div class="benefits">
+            <div class="benefit-card">
+                <h3>✨ Hyper-Targeted Traffic</h3>
+                <p>Reach customers actively looking for businesses like yours.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>✨ Brand Immersion</h3>
+                <p>Stand out with interactive elements: QR codes, video showcases, or AR-powered store tours.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>✨ Flexible Pricing</h3>
+                <p>Choose from <strong>Basic Listings</strong> (free) or premium <strong>Gameboard Packages</strong>
+                    starting at $99/month.</p>
+            </div>
+        </div>
+
+        <h2>Choose Your Partnership Plan</h2>
+
+        <div class="pricing-plans">
+            <div class="plan">
+                <h3>Basic Directory Listing</h3>
+                <div class="price">FREE</div>
+                <ul>
+                    <li>Business profile + 1 active deal</li>
+                    <li>Category tagging in the <a style="color: #148446;" href="https://promodeals.app/tZ2FRzAe7z/"
+                            target="_blank">sector directory</a></li>
+                </ul>
+            </div>
+            <div class="plan">
+                <h3>Dealopoly Gameboard Starter</h3>
+                <div class="price">$99/month</div>
+                <ul>
+                    <li>Customizable game board space + 3 deals</li>
+                    <li>Basic analytics + monthly performance report</li>
+                    <li>Featured in mini-games</li>
+                </ul>
+            </div>
+            <div class="plan">
+                <h3>VIP Gameboard Suite</h3>
+                <div class="price">$299/month</div>
+                <ul>
+                    <li>Prime gameboard placement + 10 deals</li>
+                    <li>Video integration, AR features</li>
+                    <li>Priority support and advanced analytics</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="text-align: center;">
+            <p><strong>✨ Launch Special: 20% OFF Gameboard Packages for First-Time Partners!</strong><br>
+                <em>Use code</em> <strong>DGPLAY</strong> <em>at checkout.</em>
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="#" class="cta-button">Join the DG Directory Today</a>
+        </div>
+
+        <div class="footer1">
+            <p><strong>Deal Grabber Business Team</strong><br>
+                © 2023 Deal Grabber. Turn discounts into destinations.</p>
+            <p><em>P.S. Limited gameboard spaces available —act fast to secure your spot! 🏙️</em></p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo & About Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <a style="color: #148446;" class="logo2" href="index.html"><img
+                                src="image/aboutuslogophotos/dealgrabber1bg.png" alt="Deal Grabber Logo" /></a>
+                        <div class="follow">
+                            <p>Discover the best deals and exclusive offers with Deal Grabber – your ultimate savings
+                                partner.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Quick Links</h3>
+                        <ul class="link_icon">
+                            <li><a href="index.html"><i class="fa fa-chevron-right"></i> Home</a></li>
+                            <li><a href="/index.html#about"><i class="fa fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="/index.html#features"><i class="fa fa-chevron-right"></i> Features</a></li>
+                            <li><a href="/index.html#ez-services"><i class="fa fa-chevron-right"></i> Services</a></li>
+                            <li><a href="/index.html#pricing"><i class="fa fa-chevron-right"></i> Pricing</a></li>
+                            <li><a href="capture-page.html"><i class="fa fa-chevron-right"></i> Get Started</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Follow Us</h3>
+                        <div class="follow ">
+                            <p style="text-align: left;">Stay updated on the latest deals and discounts.</p>
+                            <ul class="social_icon">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact Us</h3>
+                        <ul class="location_icon">
+                            <li> <i class="fa fa-map-marker"> </i> Chicago, IL</li>
+                            <li> <i class="fa fa-envelope "> </i> support@godealgrabber.com
+                            </li>
+                            <!-- <li><i class="fa fa-phone"></i> +1 000 567 8900</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 text-center">
+                            <p>© 2025 Deal Grabber. All Rights Reserved.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

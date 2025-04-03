@@ -270,4 +270,17 @@
         background: url(../image/menu_iconn.png);
         background-repeat: no-repeat;
     }
+    /* .follow p {
+        text-align: left !important;
+
+    } */
+    ul.location_icon {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    ul.location_icon li {
+        width: 100%; 
+        display: block; 
+    }
+        
 }
