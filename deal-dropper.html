@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deal Dropper - Physical Marketing by Deal Grabber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Standard Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    
+   <!-- Favicon for Different Browsers -->
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+   
+   <!-- Apple Touch Icon (for iOS Home Screen) -->
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+   
+   <!-- Manifest for Android/Web Apps -->
+   <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Digital Coupons</title>
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <style>
+        :root {
+            --primary-blue: #044f70;
+            --primary-green: #148446;
+            --light-green: #e6f4ea;
+            --accent-orange: #FF7A45;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            padding: 0;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 15px 30px rgba(4, 79, 112, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M22 6l-10 7L2 6"></path></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Floating Mail Card */
+        .mail-card {
+            background: white;
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: rotate(-5deg);
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 3;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .mail-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+        }
+        
+        .mail-card .stamp {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 100000;
+        }
+        
+        .mail-card .qr-code {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        /* Content Sections */
+        .container1 {
+            padding: 0 30px;
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-green);
+        }
+        
+        /* How It Works - Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: var(--primary-green);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 50px;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+            padding-left: 50px;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -20px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -20px;
+        }
+        
+        /* Benefits Cards */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-top-color: var(--accent-orange);
+        }
+        
+        .benefit-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefit-card h3 i {
+            margin-right: 10px;
+            color: var(--accent-orange);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M22 6l-10 7L2 6"></path></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-green);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button:hover {
+            background: var(--accent-orange);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+       
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(0deg);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+                text-align: left;
+                padding-right: 0;
+                padding-left: 70px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: 20px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Hero Section -->
+    <section class="hero">
+        <h1>Bring Your Deals to Life with Deal Dropper</h1>
+        <p>Bridging the gap between digital and physical worlds with high-impact marketing solutions through co-op mailings, postcards, and print campaigns.</p>
+        
+        <!-- Floating Mail Card -->
+        <div class="mail-card">
+            <div class="stamp">DG</div>
+            <h3 style="color: var(--primary-blue); margin-top: 25px; ">Exclusive Local Deal Inside!</h3>
+            <p style="color: #666;">Scan the QR code to unlock your special offer</p>
+            <div class="qr-code">QR CODE</div>
+            <p style="font-size: 0.8rem; color: #999;">Deal Dropper by Deal Grabber</p>
+        </div>
+    </section>
+    
+    <div class="container1">
+        <!-- How It Works - Timeline -->
+        <h2 class="section-title">How It Works</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Hyper-Local Mailings</h3>
+                <p>Target customers in your area with postcards and flyers featuring your latest deals and discounts.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Co-Op Marketing</h3>
+                <p>Share mailing costs with other local businesses for maximum impact at minimal expense.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <h3>Digital Integration</h3>
+                <p>Include QR codes and links on print materials to drive customers to your Deal Pages or in-store offers.</p>
+            </div>
+        </div>
+        
+        <!-- Why Choose Deal Dropper? -->
+        <h2 class="section-title">Why Choose Deal Dropper?</h2>
+        
+        <div class="benefits-grid">
+            <!-- For Customers -->
+            <div class="benefit-card">
+                <h3><i class="fas fa-users"></i> For Customers:</h3>
+                <ul>
+                    <li>Discover exclusive local deals right in your mailbox</li>
+                    <li>Get access to both online and in-store promotions through integrated QR codes</li>
+                    <li>Stay connected to your community with personalized offers</li>
+                </ul>
+            </div>
+            
+            <!-- For Businesses -->
+            <div class="benefit-card">
+                <h3><i class="fas fa-briefcase"></i> For Businesses:</h3>
+                <ul>
+                    <li>Amplify your reach with cost-effective co-op campaigns</li>
+                    <li>Combine print and digital marketing for greater visibility</li>
+                    <li>Stand out with eye-catching designs and tailored messaging</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 style="color: white; margin-top: 0;">Boost Your Local Presence with Deal Dropper Today!</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 800px; margin: 0 auto;">
+                <div style="text-align: right; border-right: 1px solid rgba(255,255,255,0.3); padding-right: 30px;">
+                    <h3 style="color: white;">For Customers:</h3>
+                    <p>Look out for Deal Dropper postcards featuring the latest deals in your neighborhood.</p>
+                </div>
+                
+                <div style="text-align: left; padding-left: 30px;">
+                    <h3 style="color: white;">For Businesses:</h3>
+                    <p>Get in touch to join our co-op mailing program and drive foot traffic to your store.</p>
+                </div>
+            </div>
+            
+            <a href="capture-page.html" class="cta-button">Get Started Now</a>
+        </div>
+        
+        <!-- Final Tagline -->
+        <div style="text-align: center; margin: 40px 0;">
+            <h3 style="color: var(--primary-blue); font-size: 1.8rem;">Deal Dropper — Your Offline Gateway to Local Savings</h3>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+           <div class="container">
+              <div class="row">
+                 <!-- Logo & About Section -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a class="logo2" href="index.html"><img src="image/aboutuslogophotos/dealgrabber1bg.png" alt="Deal Grabber Logo" /></a>
+                    <div class="follow">
+                       <p>Discover the best deals and exclusive offers with Deal Grabber – your ultimate savings partner.</p>
+                    </div>
+                 </div>
+     
+                 <!-- Quick Links -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3>Quick Links</h3>
+                    <ul class="link_icon">
+                       <li><a href="index.html"><i class="fa fa-chevron-right"></i> Home</a></li>
+                       <li><a href="/index.html#about"><i class="fa fa-chevron-right"></i> About Us</a></li>
+                       <li><a href="/index.html#features"><i class="fa fa-chevron-right"></i> Features</a></li>
+                       <li><a href="/index.html#ez-services"><i class="fa fa-chevron-right"></i> Services</a></li>
+                       <li><a href="/index.html#pricing"><i class="fa fa-chevron-right"></i> Pricing</a></li>
+                       <li><a href="capture-page.html"><i class="fa fa-chevron-right"></i> Get Started</a></li>
+                   </ul>
+                 </div>
+     
+                 <!-- Social Media Section -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3>Follow Us</h3>
+                    <div class="follow">
+                       <p>Stay updated on the latest deals and discounts.</p>
+                       <ul class="social_icon">
+                          <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+                 </div>
+     
+                 <!-- Contact Section -->
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact Us</h3>
+                    <ul class="location_icon">
+                        <li> <i class="fa fa-map-marker" style="margin-right: 5px;"> </i> Chicago, IL</li>
+                        <li> <i class="fa fa-envelope" style="margin-right: 5px;"> </i>  support@godealgrabber.com</li>
+                        <!-- <li><i class="fa fa-phone"></i> +1 000 567 8900</li> -->
+                    </ul>
+                 </div>
+              </div>
+           </div>
+     
+           <!-- Copyright Section -->
+           <div class="copyright">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-md-10 offset-md-1 text-center">
+                       <p>© 2023 Deal Grabber. All Rights Reserved.</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+</body>
+</html>
